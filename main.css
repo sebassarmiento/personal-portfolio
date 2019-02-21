@@ -24,8 +24,7 @@ i{
 /* Navbar */
 
 .navbar{
-    display: grid;
-    grid-template-columns: 4fr 2fr;
+    display: flex;
     height: 80px;
     padding: 12px;
     position: fixed;
@@ -34,47 +33,30 @@ i{
     width: 100%;
     z-index: 3;
     font-weight: 100;
+    color: white;
 }
 
-.navbar::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.801);
-    background-size: cover;
-    transform: translateY(-100%);
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: -1;
-}
-
-.navbar.scrolled::before{
-    transform: translateY(0);
-}
 
 .navbar .brand{
+    flex: 1;
     height: 100%;
     display: flex;
     align-items: center;
     padding: 12px;
-    color: rgba(255, 255, 255, 0.911);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
     animation: all 0.3s ease-in-out;
-    text-shadow: 0 0 10px white;
 }
 
 .navbar .menu{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: rgba(255, 255, 255, 0.774);
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     min-width: 300px;
+    max-width: 300px;
 }
 
 /* Intro */
@@ -86,11 +68,13 @@ i{
     z-index: 1;
     display: flex;
     align-items: center;
-    background: linear-gradient(to top right, rgb(97, 95, 95), black);
+    background: linear-gradient(to top, #D5B7C1, #2C5364);
 }
 
 .intro .text{
     font-size: 1.8em;
+    width: 100%;
+    text-align: center;
 }
 
 .intro .text h2{
@@ -106,8 +90,8 @@ i{
     content: '';
     position: absolute;
     bottom: 0px;
-    left: 0px;
-    width: 50%;
+    left: calc(50% - 100px);
+    width: 200px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.466);
 }
@@ -117,74 +101,25 @@ i{
 }
 
 .intro .text button{
-    padding: 24px;
-    background-color: red;
+    padding: 18px;
+    background-color: rgb(155, 65, 65);
+    width: 150px;
     border-radius: 2px;
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    cursor: pointer;
     color: white;
 }
 
 /* ****** */
 
-
-/* Skills */
-
-.skills{
-    height: 50vh;
-    width: 100%;
-    background: linear-gradient(to bottom right, rgb(83, 83, 83), black);
-}
-
-.skills h2{
-    text-align: center;
-    color: white;
-    font-family: Helvetica, sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 200;
-    position: relative;
-}
-
-.skills span{
-    position: absolute;
-    height: 100%;
-    width: 150px;
-    top: 0;
-    left: calc(50% - 75px);
-    background: radial-gradient(rgb(228, 228, 228), rgb(37, 37, 37));
-    opacity: 0.6;
-    filter: blur(20px);
-}
-
-.skills h2::before{
-    content: '';
-    position: absolute;
-    top: calc(50% - 0.5px);
-    left: 12px;
-    width: calc(50% - 100px);
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.308);
-}
-
-.skills h2::after{
-    content: '';
-    position: absolute;
-    top: calc(50% - 0.5px);
-    right: 12px;
-    width: calc(50% - 100px);
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.308);
-}
-
-/* ****** */
 
 
 /* Container 2 */
 
 .container-2{
-    background: linear-gradient(#CED1CB, #D5B7C1,#567187);
+    background: linear-gradient( #D5B7C1, rgb(255, 213, 121));
     width: 100vw;
     margin: 0px;
     padding: 100px 20vw;
@@ -193,13 +128,21 @@ i{
 .container-2 h2{
     width: 100%;
     padding: 24px;
-    margin-bottom: 36px;
+    margin-bottom: 100px;
     text-align: center;
     color: white;
     font-family: Helvetica, sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 200;
+    position: sticky;
+    height: 80px;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container-2 .portfolio{
@@ -228,8 +171,8 @@ i{
 
 .container-3{
     background: #005AA7;
-    background: -webkit-linear-gradient(to bottom, #FFFDE4, #2C5364);
-    background: linear-gradient(to bottom, #FFFDE4, #2C5364);
+    background: -webkit-linear-gradient(to bottom, rgb(255, 213, 121), #2C5364);
+    background: linear-gradient(to bottom, rgb(255, 213, 121), #2C5364);
     height: 100vh;
     width: 100vw;
 }
