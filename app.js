@@ -8,8 +8,12 @@ $(window).on('scroll', function () {
     let pixs = $(document).scrollTop()
     console.log('scroll', pixs)
     if(pixs < 460){
-        pixs = pixs / 20;
-        $(".text").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" }) 
+        pixs = pixs / 50;
+        $(".text").css({
+            "-webkit-filter": `blur(${pixs}px)`,
+            "filter": `blur(${pixs}px)`, 
+            "transform": `translateY(${pixs * 10}px)` 
+        }) 
     }
 
     console.log('HEIGHT', windowHeight)
@@ -33,9 +37,8 @@ $(window).on('scroll', function () {
 
 $(".see-portfolio").click(() => {
     console.log('click')
-    $('.see-portfolio').addClass('clicked')
     $('html,body').animate({
-        scrollTop: $(".portfolio").offset().top - 150},
+        scrollTop: $(".portfolio").offset().top + 300},
         {
             duration: 1000
         });

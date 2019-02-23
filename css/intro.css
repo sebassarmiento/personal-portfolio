@@ -1,0 +1,112 @@
+.intro{
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to top, #dfacbd, #2C5364);
+    transform: translateZ(30deg, -12px);
+}
+
+.intro .text{
+    font-size: 1.8em;
+    width: 100%;
+    text-align: center;
+}
+
+.intro .text h2{
+    margin: 6px 0px;
+    color: rgba(255, 255, 255, 0.952);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.411);
+    position: relative;
+    padding: 24px 0px;
+    animation: glowText 5s ease-in-out infinite;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+@keyframes glowText {
+    0%{
+        text-shadow: 0 0 10px #ffffff79, 0 0 20px #ffffff3f;
+    }
+    50%{
+        text-shadow: 0 0 10px #5c5c5cec, 0 0 20px #ffffffcb, 0 0 30px #ffffffa4;
+    }
+    100%{
+        text-shadow: 0 0 10px #ffffff79, 0 0 20px #ffffff3f;
+    }
+}
+
+.intro .text h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.466);
+}
+
+.intro-btns{
+    margin: 24px 0px;
+}
+
+.intro .text button{
+    padding: 18px;
+    background-color: rgb(155, 65, 65);
+    width: 150px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.see-portfolio{
+    position: absolute;
+    bottom: 24px;
+    left: calc(50% - 25px);
+    width: 50px;
+    padding: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.76);
+    font-weight: 100;
+    animation: seePortfolioBtn 1s ease-in-out infinite;
+    cursor: pointer;
+}
+.see-portfolio::before{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 18px);
+    height: 4px;
+    width: 24px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+.see-portfolio::after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 4px);
+    height: 4px;
+    width: 24px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+@keyframes seePortfolioBtn{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-6px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
