@@ -1,7 +1,7 @@
 .contact{
     background: #005AA7;
-    background: -webkit-linear-gradient(to bottom, rgb(173, 226, 255), #2C5364, #0F2027);
-    background: linear-gradient(to bottom, rgb(173, 226, 255), #2C5364, #0F2027);
+    background: -webkit-linear-gradient(to bottom, rgb(57, 151, 202), #2C5364, #0F2027);
+    background: linear-gradient(to bottom, rgb(57, 151, 202), #2C5364, #0F2027);
     height: calc(100vh + 200px);
     max-height: 1000px;
     min-height: 500px;
