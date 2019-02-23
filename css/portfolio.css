@@ -1,5 +1,5 @@
 .portfolio{
-    background: linear-gradient( #dfacbd, rgb(255, 213, 121), rgb(196, 214, 224));
+    background: linear-gradient( #dfacbd, rgb(255, 213, 121), rgb(173, 226, 255));
     width: 100vw;
     margin: 0px;
     padding: 0px;
@@ -28,29 +28,45 @@
 
 .portfolio .project{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 5fr;
     grid-column-gap: 50px;
     align-items: center;
-    padding: 10vw;
+    padding: 10vw 5vw;
     height: 100vh;
     width: 100vw;
     text-align: center;
     position: relative;
 }
+.portfolio .project:nth-child(3){
+    grid-template-columns: 5fr 3fr;
+}
 
-.portfolio .project img{
-    height: 30vw;
+
+
+.portfolio .project .project-images{
+    height: 50vh;
+    position: relative;
+}
+.portfolio .project .project-images .desktop-img-1, .portfolio .project .project-images .desktop-img-2{
+    height: 100%;
     border-radius: 6px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-.portfolio .project .phone-img{
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 400px;
-    min-width: 100px;
-    padding: 0px;
+    top: 10%;
+    right: 0%;
+    z-index: 1;
 }
+.portfolio .project .project-images .phone-img-1, .portfolio .project .project-images .phone-img-2{
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    z-index: 2;
+}
+
+
 
 .portfolio .project .project-info{
     padding: 24px;
@@ -63,17 +79,15 @@
     letter-spacing: 3px;
 }
 
-.portfolio .project .project-info .project-stack{
-    color: rgba(107, 107, 107, 0.664);
-}
 .portfolio .project .project-info .project-stack i{
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 0px 12px;
     margin-top: 12px;
+    color: white;
 }
 
 .portfolio .project .project-info .project-description{
-    color: rgba(107, 107, 107, 0.664);
+    color: rgba(255, 255, 255, 0.863);
 }
 
 .portfolio .project-info .project-btns button{
@@ -85,16 +99,13 @@
     font-size: 1em;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    background: transparent;
     cursor: pointer;
     position: relative;
-    background-image: linear-gradient(to right, #ffae3c 0%, #a75236 51%, #e79f3a 100%);
-    background-size: 300%;
-    background-position: left center;
     transition: all 0.3s ease-in-out;
-    animation: projectBtnHover 2s ease-in-out infinite;
+    animation: projectBtnHover 2s ease-in-out;
     animation-play-state: paused;
-    animation-fill-mode: forwards;
-    animation-direction: alternate-reverse;
+    margin-right: 12px;
 }
 
 .portfolio .project-info .project-btns button:hover{
@@ -105,7 +116,7 @@
 
 .portfolio .project-info .project-btns i{
     margin-left: 12px;
-    color: rgba(255, 255, 255, 0.747);
+    color: rgb(255, 255, 255);
 }
 
 @keyframes projectBtnHover {

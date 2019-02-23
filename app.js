@@ -31,6 +31,17 @@ $(window).on('scroll', function () {
     } else {
         $('.contact-title').css({ "font-size": '2em' })
     }
+
+    if(pixs > windowHeight - 100 && pixs < windowHeight * 2){
+        $('.phone-img-1').css({ transform: `translateY(${pixs / -4}px)` })
+    }
+
+    if(pixs > (windowHeight * 2) + 0){
+        $('.phone-img-2').css({ transform: `translateY(${pixs / -10}px)` })
+    }
+
+
+
 });
 
 
