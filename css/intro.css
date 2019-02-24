@@ -5,7 +5,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    background: linear-gradient(to top, #dfacbd, #2C5364);
+    background: linear-gradient(to top, #cc6084, rgb(36, 146, 194));
     transform: translateZ(30deg, -12px);
 }
 
@@ -19,7 +19,7 @@
     color: rgba(255, 255, 255, 0.952);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.411);
     position: relative;
-    padding: 24px 0px;
+    padding: 24px;
     animation: glowText 5s ease-in-out infinite;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 }
@@ -116,4 +116,12 @@
         transform: translateY(0px);
     }
     
+}
+
+
+
+/* Media queries */
+
+@media screen and (max-width: 800px){
+
 }

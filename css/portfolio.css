@@ -1,5 +1,5 @@
 .portfolio{
-    background: linear-gradient( #dfacbd, rgb(255, 195, 66), rgb(57, 151, 202));
+    background: linear-gradient( #cc6084, rgb(247, 178, 31), rgb(43, 174, 245));
     width: 100vw;
     margin: 0px;
     padding: 0px;
@@ -24,4 +24,10 @@
     align-items: center;
     justify-content: center;
     z-index: 3;
+}
+
+@media screen and (max-width: 800px){
+    .portfolio-title{
+        height: 60px;
+    }
 }

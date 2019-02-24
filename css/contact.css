@@ -1,7 +1,7 @@
 .contact{
     background: #005AA7;
-    background: -webkit-linear-gradient(to bottom, rgb(57, 151, 202), #2C5364, #0F2027);
-    background: linear-gradient(to bottom, rgb(57, 151, 202), #2C5364, #0F2027);
+    background: -webkit-linear-gradient(to bottom, rgb(43, 174, 245), #2C5364, #0F2027);
+    background: linear-gradient(to bottom, rgb(43, 174, 245), #2C5364, #0F2027);
     height: calc(100vh + 200px);
     max-height: 1000px;
     min-height: 500px;
@@ -39,7 +39,8 @@
     top: calc(50% + 100px);
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 80vw;
+    max-width: 500px;
 }
 
 .contact-form i{

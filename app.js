@@ -1,5 +1,3 @@
-console.log('Init app');
-
 $(document).ready(() => {
 
     $(window).on('scroll', function () {
@@ -8,11 +6,10 @@ $(document).ready(() => {
         let pixs = $(document).scrollTop()
         console.log('scroll', pixs)
         if(pixs < 460){
-            pixs = pixs / 50;
+            pixs = pixs / 10;
             $(".text").css({
                 "-webkit-filter": `blur(${pixs}px)`,
                 "filter": `blur(${pixs}px)`, 
-                "transform": `translateY(${pixs * -50}px)` 
             }) 
         }
     
