@@ -16,7 +16,6 @@
 }
 
 .intro .text h2{
-    margin: 6px 0px;
     color: rgba(255, 255, 255, 0.952);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.411);
     position: relative;
@@ -37,18 +36,8 @@
     }
 }
 
-.intro .text h2::after{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: calc(50% - 100px);
-    width: 200px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.466);
-}
-
 .intro-btns{
-    margin: 24px 0px;
+    margin: 12px 0px;
 }
 
 .intro .text button{
@@ -74,6 +63,11 @@
 .intro .text button:hover{
     box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
     transform: translate(0px, -10px);
+}
+
+.intro .text button i{
+    color: white;
+    margin-left: 12px;
 }
 
 .see-portfolio{

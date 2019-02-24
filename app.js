@@ -12,7 +12,7 @@ $(window).on('scroll', function () {
         $(".text").css({
             "-webkit-filter": `blur(${pixs}px)`,
             "filter": `blur(${pixs}px)`, 
-            "transform": `translateY(${pixs * 10}px)` 
+            "transform": `translateY(${pixs * -50}px)` 
         }) 
     }
 
@@ -20,8 +20,12 @@ $(window).on('scroll', function () {
     
     if(pixs > (windowHeight + 94)){
         $('.portfolio-title').css({ "font-size": '16px' })
+        setTimeout(() => {
+            $('.project-title').addClass('test')
+        }, 500)
     } else {
         $('.portfolio-title').css({ "font-size": '2em' })
+        $('.project-title').removeClass('test')
     }
 
     var maxScroll = $("body")[0].scrollHeight;
