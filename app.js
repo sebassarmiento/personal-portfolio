@@ -1,59 +1,53 @@
-$(document).ready(() => {
+let start1 = performance.now()
 
-    $(window).on('scroll', function () {
-        let windowHeight = $(window).height()
-    
-        let pixs = $(document).scrollTop()
-        console.log('scroll', pixs)
-        if(pixs < 460){
-            pixs = pixs / 10;
-            $(".text").css({
-                "-webkit-filter": `blur(${pixs}px)`,
-                "filter": `blur(${pixs}px)`, 
-            }) 
-        }
-    
-        console.log('HEIGHT', windowHeight)
-        
-        if(pixs > (windowHeight + 94)){
-            $('.portfolio-title').css({ "font-size": '16px' })
-            setTimeout(() => {
-                $('.project-title').addClass('test')
-            }, 500)
-        } else {
-            $('.portfolio-title').css({ "font-size": '2em' })
-            $('.project-title').removeClass('test')
-        }
-    
-        var maxScroll = $("body")[0].scrollHeight;
-    
-        if(pixs > maxScroll - 730){
-            $('.contact-title').css({ "font-size": '16px' })
-        } else {
-            $('.contact-title').css({ "font-size": '2em' })
-        }
-    
-        if(pixs > windowHeight - 100 && pixs < windowHeight * 2){
-            $('.phone-img-1').css({ transform: `translateY(${pixs / -4}px)` })
-        }
-    
-        if(pixs > (windowHeight * 2) + 0){
-            $('.phone-img-2').css({ transform: `translateY(${pixs / -10}px)` })
-        }
-    
-    
-    
-    });
-    
-    
-    
-    $(".see-portfolio").click(() => {
-        console.log('click')
-        $('html,body').animate({
-            scrollTop: $(".portfolio").offset().top + 300},
-            {
-                duration: 1000
-            });
-    });
+window.onscroll = () => {
+    let windowHeight = window.innerHeight
 
-})
+    let scrollTop = document.documentElement.scrollTop
+
+    if (scrollTop < 460) {
+        scrollTop = scrollTop / 10;
+        document.querySelector('.text').style.filter = `blur(${scrollTop}px)`
+    }
+
+
+    if (scrollTop > (windowHeight + 94)) {
+        document.querySelector('.portfolio-title').classList.add('scrolled-title')
+        setTimeout(() => {
+            document.querySelector('.project-title').classList.add('test')
+        })
+    } else {
+        document.querySelector('.portfolio-title').classList.remove('scrolled-title')
+        document.querySelector('.project-title').classList.remove('test')
+    }
+
+    let maxScroll = document.body.scrollHeight
+
+    if (scrollTop > maxScroll - 730) {
+        console.log('Entra')
+        document.querySelector('.contact-title').classList.add('scrolled-title')
+    } else {
+        console.log('Entra 2')
+        document.querySelector('.contact-title').classList.remove('scrolled-title')
+    }
+
+
+    if (scrollTop > windowHeight - 100 && scrollTop < windowHeight * 3) {
+        document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`
+    }
+
+}
+
+let portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
+
+document.querySelector('.see-portfolio').onclick = () => {
+    window.scrollTo({
+        top: portfolioOffsetTop + 200,
+        behavior: 'smooth'
+    })
+}
+
+
+let end2 = performance.now() - start1
+console.log('Javascript', end2)
+
