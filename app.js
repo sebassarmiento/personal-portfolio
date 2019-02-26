@@ -1,6 +1,3 @@
-setTimeout(() => {
-    document.getElementById('introtext').style.fontSize = '3em'
-}, 2000)
 
 window.onscroll = () => {
     let windowHeight = window.innerHeight
@@ -8,8 +5,8 @@ window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop
 
     if (scrollTop < 460) {
-        scrollTop = scrollTop / 10;
-        document.querySelector('.text').style.filter = `blur(${scrollTop}px)`
+        scrollTop /= 10;
+        document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
     }
 
 
