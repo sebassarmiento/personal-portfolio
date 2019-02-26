@@ -148,6 +148,7 @@
     }
 
     .project .project-images .phone-img-1{
+        min-height: 40vw;
         height: 70%;
         top: 100%;
         right: 100%;

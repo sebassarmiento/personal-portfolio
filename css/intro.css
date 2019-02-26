@@ -20,7 +20,8 @@
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.411);
     position: relative;
     padding: 24px;
-    animation: glowText 5s ease-in-out infinite;
+    opacity: 0;
+    animation: glowText 5s ease-in-out infinite, showIntroText 1s ease-in-out 1s forwards;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -34,6 +35,14 @@
     }
     100%{
         text-shadow: 0 0 10px #ffffff79, 0 0 20px #ffffff3f;
+    }
+}
+@keyframes showIntroText {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
@@ -54,8 +63,7 @@
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease-in-out;
-    animation: projectBtnHover 2s ease-in-out;
-    animation-play-state: paused;
+    animation: showIntroButton 2.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin-right: 12px;
     background-image: linear-gradient(to bottom, #ffffff8c 10%, rgba(0, 0, 0, 0) 40%);
     box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
@@ -71,54 +79,17 @@
     margin-left: 12px;
 }
 
-.see-portfolio{
-    position: absolute;
-    bottom: 24px;
-    left: calc(50% - 25px);
-    width: 50px;
-    padding: 24px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.76);
-    font-weight: 100;
-    animation: seePortfolioBtn 1s ease-in-out infinite;
-    cursor: pointer;
-}
-.see-portfolio::before{
-    content: '';
-    position: absolute;
-    bottom: 20px;
-    left: calc(50% - 18px);
-    height: 4px;
-    width: 24px;
-    background-color: rgb(226, 226, 226);
-    border-radius: 2px;
-    transform: rotate(45deg);
-}
-.see-portfolio::after{
-    content: '';
-    position: absolute;
-    bottom: 20px;
-    left: calc(50% - 4px);
-    height: 4px;
-    width: 24px;
-    background-color: rgb(226, 226, 226);
-    border-radius: 2px;
-    transform: rotate(-45deg);
-}
-
-@keyframes seePortfolioBtn{
+@keyframes showIntroButton {
     0%{
-        transform: translateY(0px);
+        transform: scale(0, 1);
     }
-    50%{
-        transform: translateY(-6px);
+    90%{
+        transform: scale(0, 1);
     }
     100%{
-        transform: translateY(0px);
+        transform: scale(1);
     }
-    
 }
-
 
 
 /* Media queries */

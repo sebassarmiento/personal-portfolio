@@ -4,10 +4,12 @@ window.onscroll = () => {
 
     let scrollTop = document.documentElement.scrollTop
 
-    if (scrollTop < 460) {
+    console.log(scrollTop, windowHeight)
+
+    if (scrollTop < windowHeight) {
         scrollTop /= 10;
-        document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
         document.getElementById('introtext').style.webkitFilter = `blur(${scrollTop}px)`
+        document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
     }
 
     if (scrollTop > (windowHeight + 60)) {
@@ -29,21 +31,14 @@ window.onscroll = () => {
     }
 
 
-    if (scrollTop > windowHeight - 100 && scrollTop < windowHeight * 3) {
-        document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`
+    if (scrollTop > windowHeight + 100 && scrollTop < windowHeight * 3) {
         document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / -4}px)`
+        document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`
     }
 
 }
 
 let portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
-
-document.querySelector('.see-portfolio').onclick = () => {
-    window.scrollTo({
-        top: portfolioOffsetTop + 260,
-        behavior: 'smooth'
-    })
-}
 
 
 let mobileMenu = document.getElementById('mb-menu')
