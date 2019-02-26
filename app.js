@@ -23,11 +23,10 @@ window.onscroll = () => {
 
     let maxScroll = document.body.scrollHeight
 
-    if (scrollTop > maxScroll - 730) {
-        console.log('Entra')
+    console.log(scrollTop, maxScroll - (windowHeight + 200))
+    if (scrollTop > maxScroll - (windowHeight + 200)) {
         document.querySelector('.contact-title').classList.add('scrolled-title')
     } else {
-        console.log('Entra 2')
         document.querySelector('.contact-title').classList.remove('scrolled-title')
     }
 

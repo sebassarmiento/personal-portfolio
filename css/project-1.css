@@ -12,31 +12,31 @@
 }
 
 
-
+/* Images */
 
 .project .project-images{
-    height: 50vh;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
-.project .project-images .desktop-img-1, .project .project-images .desktop-img-2{
-    height: 100%;
+.project .project-images .desktop-img-1{
+    width: 80%;
+    height: auto;
     border-radius: 6px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    position: absolute;
-    top: 10%;
-    right: 0%;
     z-index: 1;
 }
-.project .project-images .phone-img-1, .project .project-images .phone-img-2{
+.project .project-images .phone-img-1{
     height: 100%;
-    border-radius: 6px;
+    border-radius: 18px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     position: absolute;
     top: 70%;
     left: 0%;
     z-index: 2;
 }
-
+/* **** */
 
 
 
@@ -137,25 +137,23 @@
 
 
     .project .project-images{
-        height: 50vh !important;
+        height: 50vh;
         width: 100%;
         position: relative;
     }
-    .project .project-images .desktop-img-1, .project .project-images .desktop-img-2{
-        height: 100%;
-        border-radius: 6px;
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-        top: 10%;
-        left: 0;
-        z-index: 1;
+
+    .project .project-images .desktop-img-1{
+        width: 100%;
     }
-    .project .project-images .phone-img-1, .project .project-images .phone-img-2{
-        height: 100%;
-        border-radius: 6px;
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-        top: 120%;
-        left: 10%;
-        z-index: 2;
+
+    .project .project-images .phone-img-1{
+        height: 70%;
+        top: 100%;
+        right: 100%;
+    }
+
+    .project-info .project-btns button{
+        margin-top: 24px;
     }
 
 }

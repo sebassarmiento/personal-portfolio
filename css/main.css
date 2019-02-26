@@ -4,10 +4,13 @@
 @import './contact.css';
 @import './project-1.css';*/
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     padding: 0px;
     margin: 0px;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -30,33 +33,4 @@ a{
 
 i{
     color: rgba(0, 0, 0, 0.712);
-}
-
-
-
-/* Scrollbar */
-
-::-webkit-scrollbar-track
-{
-	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
-    background-color: #F5F5F5;
-    background-color: transparent;
-	border-radius: 20px;
-}
-
-::-webkit-scrollbar
-{
-	width: 20px;
-    background-color: #F5F5F5;
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb
-{
-    background-color: #AAA;
-    background: linear-gradient(to bottom, #000080b7, #2f2fd1ab, #000080c4);
-    background: transparent;
-    filter: blur(10px);
-    border-radius: 10px;
-    opacity: 0.4;
 }
