@@ -9,7 +9,6 @@ window.onscroll = () => {
         document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
     }
 
-
     if (scrollTop > (windowHeight + 60)) {
         document.querySelector('.portfolio-title').classList.add('scrolled-title')
         setTimeout(() => {
@@ -42,4 +41,19 @@ document.querySelector('.see-portfolio').onclick = () => {
         top: portfolioOffsetTop + 260,
         behavior: 'smooth'
     })
+}
+
+
+let mobileMenu = document.getElementById('mb-menu')
+
+mobileMenu.onclick = () => {
+    if(mobileMenu.classList.contains('mb-open')){
+        mobileMenu.classList.remove('mb-open')
+        mobileMenu.classList.add('mb-closed')
+        document.getElementById('navbar').classList.remove('mb-open')
+    } else {
+        mobileMenu.classList.remove('mb-closed')
+        mobileMenu.classList.add('mb-open')
+        document.getElementById('navbar').classList.add('mb-open')
+    }
 }

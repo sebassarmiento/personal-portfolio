@@ -1,8 +1,8 @@
 .navbar{
     display: flex;
     align-items: center;
-    height: 80px;
-    padding: 12px;
+    height: auto;
+    padding: 24px;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,20 +21,25 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
-    animation: all 0.3s ease-in-out;
     max-width: 40vw;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
 }
 
 .navbar .menu{
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     min-width: 300px;
-    max-width: 300px;
-    margin-left: auto;
 }
+.navbar .menu a{
+    margin-left: 12px;
+}
+
+/* Mobile Menu */
 
 .navbar .mobile-menu{
     display: none;
@@ -53,13 +58,26 @@
     background-color: white;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease-in-out;
 }
-.navbar .mobile-menu span:nth-child(2){
+.navbar .mobile-menu.mb-closed span:nth-child(2){
     top: calc(50% - 10px);
 }
-.navbar .mobile-menu span:nth-child(3){
+.navbar .mobile-menu.mb-closed span:nth-child(3){
     top: calc(50% + 10px);
+}
+
+.navbar .mobile-menu.mb-open span:nth-child(1){
+    transform: translate(-50%, -50%) scale(0);
+}
+.navbar .mobile-menu.mb-open span:nth-child(2){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.navbar .mobile-menu.mb-open span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
 }
 
 /* Media queries */
@@ -71,8 +89,37 @@
         position: fixed;
     }
     .navbar .menu{
-        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        justify-content: space-between;
+        padding: 24px;
+        max-width: calc(100vw - 42px);
+        min-width: calc(100vw - 42px);
     }
+    .navbar .menu a{
+        font-size: 0.9em;
+        margin-left: 0px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform: translateY(-100px);
+    }
+    .navbar.mb-open .menu a{
+        transform: translateY(0px);
+    }
+    .navbar.mb-open .menu a:nth-child(1){
+        transition-delay: 0.1s;
+    }
+    .navbar.mb-open .menu a:nth-child(2){
+        transition-delay: 0.2s;
+    }
+    .navbar.mb-open .menu a:nth-child(3){
+        transition-delay: 0.3s;
+    }
+
+    .navbar.mb-open .brand{
+        transform: translateX(-120%);
+    }
+
     .navbar .mobile-menu{
         display: block;
     }
