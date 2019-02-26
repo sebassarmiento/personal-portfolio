@@ -7,6 +7,7 @@ window.onscroll = () => {
     if (scrollTop < 460) {
         scrollTop /= 10;
         document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
+        document.getElementById('introtext').style.webkitFilter = `blur(${scrollTop}px)`
     }
 
     if (scrollTop > (windowHeight + 60)) {
@@ -30,6 +31,7 @@ window.onscroll = () => {
 
     if (scrollTop > windowHeight - 100 && scrollTop < windowHeight * 3) {
         document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`
+        document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / -4}px)`
     }
 
 }
