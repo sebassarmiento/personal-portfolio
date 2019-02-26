@@ -22,6 +22,7 @@
     padding: 24px;
     animation: glowText 5s ease-in-out infinite;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes glowText {

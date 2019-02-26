@@ -1,4 +1,6 @@
-let start1 = performance.now()
+setTimeout(() => {
+    document.getElementById('introtext').style.fontSize = '3em'
+}, 2000)
 
 window.onscroll = () => {
     let windowHeight = window.innerHeight
@@ -11,7 +13,7 @@ window.onscroll = () => {
     }
 
 
-    if (scrollTop > (windowHeight + 94)) {
+    if (scrollTop > (windowHeight + 60)) {
         document.querySelector('.portfolio-title').classList.add('scrolled-title')
         setTimeout(() => {
             document.querySelector('.project-title').classList.add('test')
@@ -23,7 +25,6 @@ window.onscroll = () => {
 
     let maxScroll = document.body.scrollHeight
 
-    console.log(scrollTop, maxScroll - (windowHeight + 200))
     if (scrollTop > maxScroll - (windowHeight + 200)) {
         document.querySelector('.contact-title').classList.add('scrolled-title')
     } else {
@@ -41,12 +42,7 @@ let portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
 
 document.querySelector('.see-portfolio').onclick = () => {
     window.scrollTo({
-        top: portfolioOffsetTop + 200,
+        top: portfolioOffsetTop + 260,
         behavior: 'smooth'
     })
 }
-
-
-let end2 = performance.now() - start1
-console.log('Javascript', end2)
-
