@@ -54,3 +54,20 @@ mobileMenu.onclick = () => {
         document.getElementById('navbar').classList.add('mb-open')
     }
 }
+
+let contactForm = document.getElementById('contact-form')
+
+/*
+contactForm.onsubmit = e => {
+    e.preventDefault()
+    let name = document.getElementById('name').value,
+        email = document.getElementById('email').value,
+        message = document.getElementById('message').value
+    console.log(name, email, message)
+    if(name.length > 1 && email.length > 1 && message.length > 1){
+        console.log('Valid form')
+        fetch('https://formspree.io/sebi_sarmiento@hotmail.com')
+    } else {
+        console.log('Invalid form')
+    }
+}*/
