@@ -75,23 +75,23 @@
     </div>
     <div class="contact">
         <h1 class="contact-title">Contact</h1>
-        <form class="contact-form" action="">
+        <form action="https://formspree.io/sebi_sarmiento@hotmail.com" method="POST" class="contact-form" action="">
             <div class="input-name">
-                <input required autocomplete="off" id="name" type="text">
+                <input required autocomplete="off" id="name" name="name" type="text">
                 <label for="name">Name</label>
                 <i class="fas fa-user-circle"></i>
             </div>
             <div class="input-email">
-                <input required autocomplete="off" id="email" type="text">
+                <input required autocomplete="off" id="email" name="email" type="text">
                 <label for="email">Email</label>
                 <i class="fas fa-at"></i>
             </div>
             <div class="input-message">
-                <textarea required autocomplete="off" id="message"></textarea>
+                <textarea required autocomplete="off" id="message" name="message" ></textarea>
                 <label for="message">Message</label>
                 <i class="fas fa-envelope"></i>
             </div>
-            <button class="send-message">Send</button>
+            <button type="submit" class="send-message">Send</button>
         </form>
         <p class="footer">Made with HTML5, CSS3 and Vanilla Javascript.</p>
     </div>
