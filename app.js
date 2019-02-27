@@ -4,8 +4,6 @@ window.onscroll = () => {
 
     let scrollTop = document.documentElement.scrollTop
 
-    console.log(scrollTop, windowHeight)
-
     if (scrollTop < windowHeight) {
         scrollTop /= 10;
         document.getElementById('introtext').style.webkitFilter = `blur(${scrollTop}px)`
@@ -57,17 +55,31 @@ mobileMenu.onclick = () => {
 
 let contactForm = document.getElementById('contact-form')
 
-/*
+
 contactForm.onsubmit = e => {
     e.preventDefault()
     let name = document.getElementById('name').value,
         email = document.getElementById('email').value,
         message = document.getElementById('message').value
-    console.log(name, email, message)
     if(name.length > 1 && email.length > 1 && message.length > 1){
         console.log('Valid form')
-        fetch('https://formspree.io/sebi_sarmiento@hotmail.com')
+        fetch('https://formspree.io/sebi_sarmiento@hotmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                message
+            })
+        })
+        .then(d => d.json())
+        .then(res => {
+            console.log(res)
+        })
     } else {
         console.log('Invalid form')
     }
-}*/
+}
