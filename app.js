@@ -63,7 +63,7 @@ contactForm.onsubmit = e => {
         message = document.getElementById('message').value
     if(name.length > 1 && email.length > 1 && message.length > 1){
         console.log('Valid form')
-        fetch('https://formspree.io/sebi_sarmiento@hotmail.com', {
+        fetch('https://localhost:3000/email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

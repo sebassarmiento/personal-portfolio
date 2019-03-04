@@ -29,7 +29,7 @@
 }
 .project .project-images .phone-img-1{
     height: 100%;
-    border-radius: 18px;
+    border-radius: 20px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     position: absolute;
     top: 70%;
@@ -152,6 +152,7 @@
         height: 70%;
         top: 100%;
         right: 100%;
+        border-radius: 14px;
     }
 
     .project-info .project-btns{
