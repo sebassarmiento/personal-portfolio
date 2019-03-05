@@ -12,12 +12,8 @@ window.onscroll = () => {
 
     if (scrollTop > (windowHeight + 60)) {
         document.querySelector('.portfolio-title').classList.add('scrolled-title')
-        setTimeout(() => {
-            document.querySelector('.project-title').classList.add('test')
-        })
     } else {
         document.querySelector('.portfolio-title').classList.remove('scrolled-title')
-        document.querySelector('.project-title').classList.remove('test')
     }
 
     let maxScroll = document.body.scrollHeight
@@ -28,8 +24,11 @@ window.onscroll = () => {
         document.querySelector('.contact-title').classList.remove('scrolled-title')
     }
 
+    scrollTop = document.documentElement.scrollTop
+    console.log(scrollTop)
 
-    if (scrollTop > windowHeight + 100 && scrollTop < windowHeight * 3) {
+
+    if (scrollTop > 200) {
         document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / -4}px)`
         document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`
     }

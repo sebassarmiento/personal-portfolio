@@ -1,0 +1,38 @@
+.joiner-1{
+    height: 200px;
+    width: 100%;
+    background: red;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+    position: relative;
+}
+
+.joiner-1 .wave{
+    opacity: .6;
+    position: absolute;
+    top: 0%;
+    left: calc(50% - 100vw);
+    width: 200%;
+    height: 200vw;
+    background: rgb(255, 255, 255);
+    transform-origin: 50% 48%;
+    border-radius: 46%;
+    animation: wave 12s infinite linear;
+    pointer-events: none;
+}
+
+.joiner-1 .wave:nth-child(2){
+    left: calc(50% - 120vw);
+    opacity: .4;
+    animation: wave 12s infinite linear 1s;
+}
+.joiner-1 .wave:nth-child(3){
+    left: calc(50% - 80vw);
+    opacity: .2;
+    animation: wave 12s infinite linear 2s;
+}
+
+
+@keyframes wave {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }

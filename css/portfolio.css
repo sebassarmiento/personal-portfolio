@@ -1,5 +1,6 @@
 .portfolio{
-    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #6a85b6 100%);
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    background: white;
     width: 100vw;
     margin: 0px;
     padding: 0px;
@@ -8,7 +9,6 @@
 .portfolio .portfolio-title{
     width: 100%;
     padding: 24px;
-    margin-bottom: 200px;
     text-align: center;
     color: white;
     font-family: Helvetica, sans-serif;
@@ -30,6 +30,9 @@
 }
 
 @media screen and (max-width: 800px){
+    .portfolio .portfolio-title{
+        position: relative;
+    }
     .portfolio .portfolio-title.scrolled-title{
         opacity: 0;
         height: 60px;
