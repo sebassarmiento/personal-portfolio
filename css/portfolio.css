@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 30;
 }
 
 .portfolio .portfolio-title.scrolled-title{
@@ -32,10 +32,7 @@
 @media screen and (max-width: 800px){
     .portfolio .portfolio-title{
         position: relative;
-    }
-    .portfolio .portfolio-title.scrolled-title{
         opacity: 0;
-        height: 60px;
-        font-size: 16px;
+        z-index: 1;
     }
 }
