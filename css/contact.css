@@ -21,7 +21,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 12px;
+    grid-gap: 24px 12px;
     color: #293347;
 }
 
@@ -63,6 +63,7 @@
     font-size: 1em;
     color: #fff;
     background-color: #3f51b5;
+    background-image: linear-gradient(-60deg, rgb(247, 107, 26) 0%, #f09819 100%);
     border: none;
     border-radius: 3px;
     position: relative;
@@ -76,4 +77,15 @@
 
 .send-btn:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width: 700px){
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form .name, .contact-form .email, .contact-form .message{
+        margin-top: 24px;
+    }
 }

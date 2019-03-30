@@ -29,9 +29,12 @@
 }
 
 @media screen and (max-width: 800px){
+    .portfolio{
+        padding: 50px 0px;
+    }
+
     .portfolio .portfolio-title{
         position: relative;
-        opacity: 0;
         z-index: 1;
     }
 }

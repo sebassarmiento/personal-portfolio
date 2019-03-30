@@ -144,16 +144,20 @@
         border-radius: 14px;
     }
 
+    .project-info{
+        padding-top: 0px !important;
+        margin-top: -24px;
+    }
+
     .project-info .project-btns{
         width: 85vw;
         margin-top: 24px;
         display: flex;
         align-items: center;
-        justify-content: space-around;
     }
 
     .project-info .project-btns button{
-        margin-right: 0px;
+        margin-right: 12px;
     }
 
 }
