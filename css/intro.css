@@ -1,14 +1,16 @@
 .intro{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     margin: 0px;
     z-index: 1;
     display: flex;
     align-items: center;
     background-image: linear-gradient(60deg, #4465c0 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-    background-size: 400% 100%;
+    background: white;
+    /* background-size: 400% 100%; */
     transform: translateZ(30deg, -12px);
-    animation: Gradient 15s ease infinite;
+    animation: Gradients 15s ease infinite;
+    position: relative;
 }
 
 @keyframes Gradient {
@@ -23,6 +25,23 @@
 	}
 }
 
+.bg-intro{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    background: red;
+}
+.bg-intro img{
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    min-width: 1000px;
+}
+
 .intro .text{
     font-size: 1.8em;
     width: 100%;
@@ -31,6 +50,7 @@
 
 .intro .text h2{
     color: rgba(255, 255, 255, 0.952);
+    color: #2b76b9 !important;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.411);
     position: relative;
     padding: 24px;
@@ -72,6 +92,7 @@
     margin-right: 12px;
     background-image: linear-gradient(to bottom, #ffffff8c 10%, rgba(0, 0, 0, 0) 40%);
     box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    color: #2b76b9 !important;
 }
 
 .intro .text button:hover{

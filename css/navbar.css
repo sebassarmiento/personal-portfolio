@@ -1,16 +1,17 @@
 .navbar{
     display: flex;
     align-items: center;
-    height: auto;
+    height: 70px;
     padding: 24px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     max-width: 100vw;
-    z-index: 10;
+    z-index: 3;
     font-weight: 100;
     color: white;
+    color: #2b76b9 !important;
 }
 
 .navbar::after{
@@ -36,6 +37,7 @@
 .navbar .brand{
     height: 100%;
     display: flex;
+    display: none;
     align-items: center;
     padding: 0px;
     text-transform: uppercase;
@@ -56,6 +58,28 @@
         opacity: 1;
     }
 }
+
+.navbar i{
+    margin-left: 6px;
+    color: white;
+    font-size: 0.9em;
+}
+.navbar .contact-navbar-btn{
+    border: 2px solid #2b76b9;
+    border-radius: 25px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+}
+.navbar .contact-navbar-btn:hover{
+    background: #2b76b9;
+    color: white;
+    cursor: pointer;
+}
+
 
 .navbar .menu{
     flex: 1;

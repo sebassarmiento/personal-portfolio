@@ -10,7 +10,7 @@ window.onscroll = () => {
         document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
     }
 
-    if (scrollTop > (windowHeight -20)) {
+    if (scrollTop > (windowHeight - 20) ) {
         document.querySelector('.portfolio-title').classList.add('scrolled-title')
     } else {
         document.querySelector('.portfolio-title').classList.remove('scrolled-title')
@@ -28,7 +28,7 @@ window.onscroll = () => {
     console.log(scrollTop)
 
 
-    if (scrollTop > 200) {
+    if (scrollTop > windowHeight) {
         document.getElementById('navbar').classList.add('scrolled')
         document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / -4}px)`
         document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`

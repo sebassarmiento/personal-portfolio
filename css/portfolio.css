@@ -4,6 +4,7 @@
     width: 100vw;
     margin: 0px;
     padding: 0px;
+    position: relative;
 }
 
 .portfolio .portfolio-title{
@@ -22,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 30;
+    z-index: 5;
 }
 
 .portfolio .portfolio-title.scrolled-title{
