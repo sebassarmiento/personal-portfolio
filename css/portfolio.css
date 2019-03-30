@@ -3,31 +3,29 @@
     background: white;
     width: 100vw;
     margin: 0px;
-    padding: 0px;
+    padding: 50px;
     position: relative;
 }
 
 .portfolio .portfolio-title{
-    width: 100%;
+    width: 30%;
+    margin: auto;
     padding: 24px;
     text-align: center;
-    color: white;
     font-family: Helvetica, sans-serif;
-    letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 200;
-    position: sticky;
-    top: 0;
-    left: 0;
     transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5;
-}
-
-.portfolio .portfolio-title.scrolled-title{
-    font-size: 16px;
+    color: #304352;
+    margin: 0px 24px;
+    text-align: center;
+    padding: 48px 24px;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    position: relative;
 }
 
 @media screen and (max-width: 800px){

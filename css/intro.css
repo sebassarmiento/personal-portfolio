@@ -1,12 +1,11 @@
 .intro{
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     margin: 0px;
     z-index: 1;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(60deg, #4465c0 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-    background: white;
+    background-image: linear-gradient(to bottom right, white 60%, #2cacd1 100%);
     /* background-size: 400% 100%; */
     transform: translateZ(30deg, -12px);
     animation: Gradients 15s ease infinite;
@@ -23,22 +22,6 @@
 	100% {
 		background-position: 0% 0%
 	}
-}
-
-.bg-intro{
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
-}
-.bg-intro img{
-    position: absolute;
-    bottom: -100px;
-    width: 100%;
-    min-width: 1000px;
 }
 
 .intro .text{
@@ -78,11 +61,10 @@
     height: 50px;
     padding: 0px 24px;
     border-radius: 25px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #2b76b9;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 0.5em;
     font-weight: lighter;
-    color: rgb(255, 255, 255);
     background: transparent;
     cursor: pointer;
     position: relative;
@@ -100,7 +82,7 @@
 }
 
 .intro .text button i{
-    color: white;
+    color: #2b76b9;
     margin-left: 12px;
 }
 

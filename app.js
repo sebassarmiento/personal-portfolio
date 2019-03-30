@@ -10,28 +10,16 @@ window.onscroll = () => {
         document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
     }
 
-    if (scrollTop > (windowHeight - 20) ) {
-        document.querySelector('.portfolio-title').classList.add('scrolled-title')
-    } else {
-        document.querySelector('.portfolio-title').classList.remove('scrolled-title')
-    }
-
     let maxScroll = document.body.scrollHeight
-
-    if (scrollTop > maxScroll - (windowHeight + 200)) {
-        document.querySelector('.contact-title').classList.add('scrolled-title')
-    } else {
-        document.querySelector('.contact-title').classList.remove('scrolled-title')
-    }
 
     scrollTop = document.documentElement.scrollTop
     console.log(scrollTop)
 
 
-    if (scrollTop > windowHeight) {
+    if (scrollTop > windowHeight - 200) {
         document.getElementById('navbar').classList.add('scrolled')
-        document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / -4}px)`
-        document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / -4}px)`
+        document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / 4}px)`
+        document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / 4}px)`
     } else {
         document.getElementById('navbar').classList.remove('scrolled')
     }
