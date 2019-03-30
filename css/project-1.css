@@ -19,24 +19,28 @@
     right: -5%;
     z-index: 0;
     transform: rotate(90deg);
+    display: block;
 }
 
 .smoke-2{
     position: absolute;
     height: 400px;
     top: 25%;
-    left: -5%;
+    left: -10%;
     z-index: 0;
     transform: rotate(-90deg);
+    display: block;
 }
 
 .smoke-3{
     position: absolute;
     height: 400px;
-    top: 0%;
-    right: 0%;
-    transform: rotate(35deg) translate(100px,-40px);
+    top: -2%;
+    background: red;
+    right: -8%;
+    transform: rotate(35deg) translate(50px,-40px);
     z-index: 0;
+    display: block;
 }
 .smoke-4{
     position: absolute;
@@ -44,13 +48,17 @@
     top: 50%;
     right: 0%;
     z-index: 0;
+    transform: rotate(90deg);
+    display: block;
 }
 .smoke-5{
     position: absolute;
     height: 400px;
-    top: 70%;
-    right: 0%;
+    top: 80%;
+    left: 1%;
     z-index: 0;
+    display: block;
+    transform: rotate(-90deg);
 }
 
 /* Images */
@@ -92,6 +100,7 @@
     font-weight: 400;
     margin-top: 12px;
     transition: all 1s ease-in-out;
+    mix-blend-mode: difference;
 }
 
 .project .project-info .project-stack i{
