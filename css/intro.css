@@ -5,7 +5,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom right, white 60%, #2cacd1 100%);
+    background-image: linear-gradient(210deg, white 50%, #6cd3f0 85%,#2cacd1 100%);
     /* background-size: 400% 100%; */
     transform: translateZ(30deg, -12px);
     animation: Gradients 15s ease infinite;

@@ -20,7 +20,7 @@
     justify-content: flex-end;
 }
 .project .project-images .desktop-img-1{
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 6px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -39,25 +39,34 @@
 /* **** */
 
 
+.project-info .stack-2{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a9b0be;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin: 0px;
+    margin-top: 12px;
+}
 
 .project .project-info{
     padding: 24px;
     z-index: 2;
 }
 
-.project .project-info h4{
+.project .project-info .project-title{
     font-size: 2.4em;
-    font-family: Helvetica, sans-serif;
     font-weight: 400;
-    margin-top: 12px;
     transition: all 1s ease-in-out;
-    mix-blend-mode: difference;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    margin-left: -2px;
+    color: #333;
 }
 
-.project .project-info .project-stack i{
-    font-size: 1.5em;
-    margin: 0px 12px;
-    margin-top: 12px;
+.project-info .stack{
+    font-size: 0.8em;
 }
 
 .project .project-info .project-description{

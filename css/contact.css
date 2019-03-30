@@ -1,0 +1,79 @@
+.contact-container{
+    padding: 12px;
+}
+
+.contact-container h2{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-transform: uppercase;
+    color: #304352;
+    margin: 50px auto;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+.contact-form{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 12px;
+    color: #293347;
+}
+
+.contact-form label{
+    font-weight: 100;
+    color: rgba(41,51,71,0.65);
+}
+
+.contact-form input, .contact-form .message textarea{
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #E6ECF8;
+    width: 100%;
+    font-size: 1em;
+    color: #293347;
+    margin-top: 12px;
+    font-weight: 300;
+}
+
+.contact-form .message textarea{
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.contact-form .message{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.send-btn{
+    margin: 0px auto;
+    margin-top: 24px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 135px;
+    padding: 12px 18px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    background-color: #3f51b5;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.send-btn i{
+    color: #fff;
+}
+
+.send-btn:hover{
+    cursor: pointer;
+}
