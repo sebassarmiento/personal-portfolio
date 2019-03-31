@@ -6,8 +6,8 @@ window.onscroll = () => {
 
     if (scrollTop < windowHeight) {
         scrollTop /= 10;
-        document.getElementById('introtext').style.webkitFilter = `blur(${scrollTop}px)`
-        document.getElementById('introtext').style.filter = `blur(${scrollTop}px)`
+        document.getElementById('intro').style.webkitFilter = `blur(${scrollTop / 2}px)`
+        document.getElementById('intro').style.filter = `blur(${scrollTop / 2}px)`
     }
 
     let maxScroll = document.body.scrollHeight

@@ -5,7 +5,12 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom right, white 50%, #6cd3f0 85%,#2cacd1 100%);
+    background-image: linear-gradient(to bottom right, white 50%,#6cd3f0 85%,#2cacd1 100%);
+    background-image: url('../img/17209.jpg');
+    background-image: url('../img/foto\ sebi.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: right;
     /* background-size: 400% 100%; */
     transform: translateZ(30deg, -12px);
     animation: Gradients 15s ease infinite;
@@ -24,22 +29,41 @@
 	}
 }
 
+.intro-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0) 50%, rgb(44, 110, 143));
+    background-image: url('../img/foto\ sebi.jpg');
+    opacity: 0;
+    z-index: -1;
+}
+
 .intro .text{
     font-size: 1.8em;
     width: 100%;
-    text-align: center;
+}
+
+.intro .text p{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 0px 24px;
 }
 
 .intro .text h2{
     color: rgba(255, 255, 255, 0.952);
-    color: #2b76b9 !important;
+    color: #2b76b9;
+    color: #4d5563;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.411);
     position: relative;
-    padding: 24px;
+    padding: 0px 24px;
     opacity: 0;
     animation: showIntroText 1s ease-in-out 1s forwards;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-family: 'Lato', sans-serif;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 700;
 }
 
 @keyframes showIntroText {
@@ -57,34 +81,62 @@
     margin: 12px 0px;
 }
 
-.intro .text button{
-    height: 50px;
-    padding: 0px 24px;
-    border-radius: 25px;
-    border: 2px solid #2b76b9;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 0.5em;
-    font-weight: lighter;
-    background: transparent;
-    cursor: pointer;
+.intro-btns a{
+    display: inline-block;
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin: 10px;
+    text-align: center;
     position: relative;
-    transition: all 0.3s ease-in-out;
-    animation: showIntroButton 2.4s linear;
-    margin-right: 12px;
-    background-image: linear-gradient(to bottom, #ffffff8c 10%, rgba(0, 0, 0, 0) 40%);
-    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
-    color: #2b76b9 !important;
+    overflow: hidden;
+    border-radius: 28%;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    opacity: 0.99;
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
-.intro .text button:hover{
-    box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
-    transform: translate(0px, -10px);
+.intro-btns a::before{
+    content: '';
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 90%;
+    left: -110%;
+    background-color: #333;
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
-.intro .text button i{
-    color: #2b76b9;
-    margin-left: 12px;
+.intro-btns a i{
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    color: #333;
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
+
+.intro-btns a:focus::before, .intro-btns a:hover::before{
+    top: -10%;
+    left: -10%;
+}
+
+.intro-btns a:focus i, .intro-btns a:hover i{
+    color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+
+
+
+
 
 @keyframes showIntroButton {
     0%{
