@@ -5,28 +5,11 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom right, white 50%,#6cd3f0 85%,#2cacd1 100%);
-    background-image: url('../img/17209.jpg');
-    background-image: url('../img/foto\ sebi.jpg');
+    background-image: url('../img/intro-bg.jpg');
     background-size: cover;
     background-position-y: center;
     background-position-x: right;
-    /* background-size: 400% 100%; */
-    transform: translateZ(30deg, -12px);
-    animation: Gradients 15s ease infinite;
     position: relative;
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 0%
-	}
-	50% {
-		background-position: 100% 0%
-	}
-	100% {
-		background-position: 0% 0%
-	}
 }
 
 .intro-bg{
@@ -36,7 +19,6 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(140deg, rgba(255, 255, 255, 0) 50%, rgb(44, 110, 143));
-    background-image: url('../img/foto\ sebi.jpg');
     opacity: 0;
     z-index: -1;
 }
@@ -44,6 +26,7 @@
 .intro .text{
     font-size: 1.8em;
     width: 100%;
+    animation: showIntroText 1s ease-in-out forwards;
 }
 
 .intro .text p{

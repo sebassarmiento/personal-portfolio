@@ -187,6 +187,9 @@
         height: auto;
         position: fixed;
     }
+    .navbar::after{
+        transform: scale(1);
+    }
     .navbar .menu{
         position: absolute;
         top: 0px;
