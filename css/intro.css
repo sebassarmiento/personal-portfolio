@@ -2,13 +2,15 @@
     height: 100vh;
     width: 100vw;
     margin: 0px;
-    z-index: 1;
     display: flex;
     align-items: center;
     background-size: cover;
     background-position-y: center;
     background-position-x: center;
     position: relative;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    margin-bottom: -150px;
+    z-index: 1;
 }
 
 .intro .text{
@@ -34,6 +36,9 @@
     font-size: 16px;
     padding: 0px 24px;
     font-weight: 100;
+    font-family: 'Lato', sans-serif;
+    color: #4d5563;
+    margin-top: 4px;
 }
 
 .intro .text h2{
@@ -61,62 +66,35 @@
     }
 }
 
-.intro-btns{
-    margin: 12px 0px;
-}
-
-.intro-btns a{
-    display: inline-block;
-    background-color: #fff;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    margin: 10px;
-    text-align: center;
+.intro .see-projects{
+    border-radius: 2px;
+    border: none;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    background-image: linear-gradient(-60deg, rgb(247, 107, 26) 0%, #f09819 100%);
     position: relative;
     overflow: hidden;
-    border-radius: 28%;
-    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    opacity: 0.99;
-    transition: all 0.35s;
-    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+    margin-left: 24px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
 }
-
-.intro-btns a::before{
-    content: '';
-    width: 120%;
-    height: 120%;
-    position: absolute;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 90%;
-    left: -110%;
-    background-color: #333;
-    transition: all 0.35s;
-    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+.intro .see-projects:hover{
+    box-shadow: 10px 10px 0px rgb(45, 233, 240);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.2);
 }
-
-.intro-btns a i{
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    color: #333;
-    transition: all 0.35s;
-    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+.intro .see-projects i{
+    margin-left: 12px;
+    color: white;
+    margin-bottom: -12px;
 }
-
-.intro-btns a:focus::before, .intro-btns a:hover::before{
-    top: -10%;
-    left: -10%;
-}
-
-.intro-btns a:focus i, .intro-btns a:hover i{
-    color: #fff;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
 
 
 
@@ -150,7 +128,6 @@
 
 
 svg{
-    z-index: 1;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    z-index: 2;
 }
