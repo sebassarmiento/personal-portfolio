@@ -6,8 +6,8 @@ window.onscroll = () => {
 
     if (scrollTop < windowHeight) {
         scrollTop /= 10;
-        document.getElementById('intro').style.webkitFilter = `blur(${scrollTop / 2}px)`
-        document.getElementById('intro').style.filter = `blur(${scrollTop / 2}px)`
+        document.getElementById('intro').style.webkitFilter = `blur(${scrollTop / 5}px)`
+        document.getElementById('intro').style.filter = `blur(${scrollTop / 5}px)`
     }
 
     let maxScroll = document.body.scrollHeight
@@ -23,6 +23,20 @@ window.onscroll = () => {
     } else {
         document.getElementById('navbar').classList.remove('scrolled')
     }
+
+    if(scrollTop > windowHeight + 100){
+        document.getElementById('be-info').classList.add('show-info')
+    }
+
+    if(scrollTop > windowHeight + 800){
+        document.getElementById('mowser-info').classList.add('show-info')
+    }
+
+    if(scrollTop > windowHeight + 1400){
+        document.getElementById('twitter-info').classList.add('show-info')
+    }
+
+
 
 }
 

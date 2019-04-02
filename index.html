@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/portfolio.css">
-    <link type="text/css" rel="stylesheet" href="css/project-1.css">
+    <link type="text/css" rel="stylesheet" href="css/project.css">
     <link type="text/css" rel="stylesheet" href="css/navbar.css">
     <link type="text/css" rel="stylesheet" href="css/intro.css">
     <link type="text/css" rel="stylesheet" href="css/skills.css">
@@ -40,31 +40,28 @@
         </div>
     </nav>
 
-    <div class="intro" id="intro" >
+    <div class="intro" id="intro">
         <div id="introtext" class="text">
             <h2>Web Development</h2>
-            <p>Hey! I am Sebastian Sarmiento, a front end developer based in Ocala, fl.</p>
+            <p>Hey! I am Sebastian Sarmiento, a full-stack web developer from Ocala, fl.</p>
         </div>
-        <div class="intro-bg"></div>
+        <div class="intro-icon">
+            <img src="./img/Diseño sin título (1).png" alt="">
+        </div>
     </div>
 
-    <div class="skills-container">
-        <h2>MY SKILLS</h2>
-        <div class="skills">
-            <div class="skill"><i class="fab fa-js-square"></i> Javascript</div>
-            <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
-            <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
-            <div class="skill"><i class="fab fa-react"></i> React</div>
-            <div class="skill"><i class="fab fa-react"></i> Redux</div>
-            <div class="skill"><i class="fab fa-vuejs"></i> Vue</div>
-            <div class="skill"><i class="fab fa-vuejs"></i> Vuex</div>
-            <div class="skill"><i class="fab fa-node-js"></i> Node</div>
-            <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
-            <div class="skill"><i class="fab fa-github"></i> Github</div>
-            <div class="skill"><i class="fab fa-sass"></i> Sass</div>
-            <div class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</div>
-        </div>
-    </div>
+    <svg width="100%" viewBox="0 0 1800 265" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="separator-curve separator-curve--multi" data-v-466576e2="">
+                <path
+                    d="M779.284 56.041C1156.38 -9.53707 1616.88 -4.27216 1800 6.55756V179H0V96.0277C102.638 110.023 402.188 121.619 779.284 56.041Z"
+                    fill="#19304B" data-v-466576e2=""></path>
+                <path
+                    d="M795.837 128.212C470.508 150.66 129.725 103.493 0 77.104V264H1800V28C1394.84 48.0425 1121.17 105.765 795.837 128.212Z"
+                    fill="#00a9b2" data-v-466576e2=""></path>
+                <path
+                    d="M683.62 209.815C389.783 272.023 105.441 262.826 0 250.451V265H1800V201.789C1327.76 120.016 977.457 147.608 683.62 209.815Z"
+                    fill="white" data-v-466576e2=""></path>
+    </svg>
 
     <div class="portfolio">
 
@@ -75,7 +72,7 @@
                 <img class="phone-img-1" src="./img/bookexchangeriphone.png" alt="">
                 <img class="desktop-img-1" src="./img/bookexchangerdesktop.gif" alt="">
             </div>
-            <div class="project-info">
+            <div class="project-info" id="be-info">
                 <h4 class="project-title">Book exchanger</h4>
                 <p class="stack-2">React.js, Redux, Node.js, Express.js and MongoDB.</p>
                 <p class="project-description">Book exchanger is the app that lets you exchange those books laying in
@@ -95,7 +92,7 @@
             <div class="project-images">
                 <img class="desktop-img-1" src="./img/mowser.gif" alt="">
             </div>
-            <div class="project-info">
+            <div class="project-info" id="mowser-info">
                 <h4 class="project-title">Mowser</h4>
                 <p class="stack-2">Vue.js and vuex.</p>
                 <p class="project-description">
@@ -115,7 +112,7 @@
             <div class="project-images">
                 <img class="desktop-img-1" src="./img/bookexchangerdesktop.gif" alt="">
             </div>
-            <div class="project-info">
+            <div class="project-info" id="twitter-info">
                 <span class="project-stack">
                     <i class="fab fa-react"></i>
                     <i class="fab fa-node-js"></i>
@@ -136,6 +133,24 @@
             </div>
         </div>
 
+        <div class="skills-container">
+                <h2>MY SKILLS</h2>
+                <div class="skills">
+                    <div class="skill"><i class="fab fa-js-square"></i> Javascript</div>
+                    <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="skill"><i class="fab fa-react"></i> React</div>
+                    <div class="skill"><i class="fab fa-react"></i> Redux</div>
+                    <div class="skill"><i class="fab fa-vuejs"></i> Vue</div>
+                    <div class="skill"><i class="fab fa-vuejs"></i> Vuex</div>
+                    <div class="skill"><i class="fab fa-node-js"></i> Node</div>
+                    <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
+                    <div class="skill"><i class="fab fa-github"></i> Github</div>
+                    <div class="skill"><i class="fab fa-sass"></i> Sass</div>
+                    <div class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+                </div>
+            </div>
+
     </div>
 
     <div class="contact-container" id="contact">
@@ -143,11 +158,11 @@
         <form class="contact-form">
             <div class="name">
                 <label for="">Name</label>
-                <input type="text" required >
+                <input type="text" required>
             </div>
             <div class="email">
                 <label for="">Email</label>
-                <input type="email" required >
+                <input type="email" required>
             </div>
             <div class="message">
                 <label for="">Message</label>
@@ -156,7 +171,7 @@
             <button class="send-btn">Send <i class="fas fa-paper-plane"></i></button>
         </form>
         <footer>
-                Developed with plain HTML5, CSS3 and Vanilla Javascript.
+            Developed with plain HTML5, CSS3 and Vanilla Javascript.
         </footer>
     </div>
     <script src="app.js"></script>

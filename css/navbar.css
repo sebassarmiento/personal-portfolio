@@ -43,7 +43,7 @@
     max-width: 40vw;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
-    animation: showNavbarBrand 1s ease-in-out 2s forwards;
+    animation: showNavbarBrand 1s ease-in-out forwards;
     opacity: 0;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
@@ -100,13 +100,13 @@
     font-family: 'Lato', sans-serif !important;
     opacity: 0;
     margin-left: 24px;
-    animation: showNavbarMenuItemsDesktop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 3s forwards;
+    animation: showNavbarMenuItemsDesktop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s forwards;
 }
 .navbar .menu a:nth-child(2){
-    animation-delay: 3.2s;
+    animation-delay: 0.8s;
 }
 .navbar .menu a:nth-child(3){
-    animation-delay: 3.4s;
+    animation-delay: 1s;
 }
 
 @keyframes showNavbarMenuItemsDesktop {
@@ -133,7 +133,7 @@
     position: relative;
     padding: 12px;
     transform: scale(0);
-    animation: showMobileMenu 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 3s forwards;
+    animation: showMobileMenu 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s forwards;
 }
 
 @keyframes showMobileMenu {

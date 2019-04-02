@@ -3,7 +3,7 @@
     grid-template-columns: 3fr 3fr;
     grid-column-gap: 50px;
     align-items: center;
-    padding: 10vw 5vw;
+    padding: 24px;
     min-height: 100vh;
     height: auto;
     width: 100vw;
@@ -39,6 +39,7 @@
 /* **** */
 
 
+
 .project-info .stack-2{
     font-weight: 700;
     text-transform: uppercase;
@@ -52,6 +53,10 @@
 .project .project-info{
     padding: 24px;
     z-index: 2;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 1s ease-in-out;
+    z-index: 0;
 }
 
 .project .project-info .project-title{
