@@ -1,3 +1,17 @@
+document.getElementById('see-work').onclick = e => {
+    window.scrollTo({
+        top: 850,
+        behavior: 'smooth'
+    })
+}
+
+document.getElementById('scroll-to-projects').onclick = e => {
+    window.scrollTo({
+        top: 850,
+        behavior: 'smooth'
+    })
+}
+
 
 window.onscroll = () => {
     let windowHeight = window.innerHeight
@@ -24,15 +38,15 @@ window.onscroll = () => {
         document.getElementById('navbar').classList.remove('scrolled')
     }
 
-    if(scrollTop > windowHeight + 100){
+    if(scrollTop > windowHeight){
         document.getElementById('be-info').classList.add('show-info')
     }
 
-    if(scrollTop > windowHeight + 800){
+    if(scrollTop > windowHeight + 700){
         document.getElementById('mowser-info').classList.add('show-info')
     }
 
-    if(scrollTop > windowHeight + 1400){
+    if(scrollTop > windowHeight + 1300){
         document.getElementById('twitter-info').classList.add('show-info')
     }
 

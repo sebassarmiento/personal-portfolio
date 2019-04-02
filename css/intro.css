@@ -13,6 +13,15 @@
     z-index: 1;
 }
 
+.intro-bg{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+    height: 30%;
+    opacity: 0;
+}
+
 .intro .text{
     font-size: 2.5em;
     opacity: 0;
@@ -22,6 +31,9 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     padding: 24px;
+    position: relative;
+    margin-bottom: -100px;
+    z-index: 2;
 }
 
 .intro .intro-icon{
@@ -85,7 +97,7 @@
     font-weight: 800;
 }
 .intro .see-projects:hover{
-    box-shadow: 10px 10px 0px rgb(45, 233, 240);
+    box-shadow: 10px 10px 0px #00a9b2;
     color: white;
     cursor: pointer;
     transform: scale(1.2);

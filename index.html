@@ -14,6 +14,7 @@
     <link type="text/css" rel="stylesheet" href="css/skills.css">
     <link type="text/css" rel="stylesheet" href="css/contact.css">
     <link type="text/css" rel="stylesheet" href="css/footer.css">
+    <link type="text/css" rel="stylesheet" href="css/circles.css">
     <link rel="icon" href="./img/ss.png">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -27,7 +28,7 @@
     <nav id="navbar" class="navbar">
         <a class="brand" href="#!"> <img src="./img/ss.png" alt=""> Sebastian Sarmiento</a>
         <div class="menu">
-            <a href="">Projects</a>
+            <a href="#!" id="scroll-to-projects" >Projects</a>
             <a href="./img/SEBASTIAN SARMIENTO (2) (1).png" download="Sebastian Sarmiento Resume">
                 Resume
             </a>
@@ -44,12 +45,14 @@
         <div id="introtext" class="text">
             <h2>Web Development</h2>
             <p>Hey! I am Sebastian Sarmiento, a full-stack web developer from Ocala, fl.</p>
-            <button class="see-projects">See my work <i class="fas fa-level-down-alt"></i></button>
+            <button class="see-projects" id="see-work">See my work <i class="fas fa-level-down-alt"></i></button>
         </div>
         <div class="intro-icon">
             <img src="./img/imageedit_21_5125318292.png" alt="">
         </div>
     </div>
+
+    <img class="intro-bg" src="./img/imageedit_24_8752935163.png" alt="">
 
     <svg width="100%" viewBox="0 0 1800 265" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="separator-curve separator-curve--multi" data-v-466576e2="">
@@ -69,47 +72,68 @@
         <h2 class="portfolio-title">Projects</h2>
 
         <div class="project">
+            <div class="project-bg"></div>
             <div class="project-images">
                 <img class="phone-img-1" src="./img/bookexchangeriphone.png" alt="">
                 <img class="desktop-img-1" src="./img/bookexchangerdesktop.gif" alt="">
             </div>
             <div class="project-info" id="be-info">
                 <h4 class="project-title">Book exchanger</h4>
-                <p class="stack-2">React.js, Redux, Node.js, Express.js and MongoDB.</p>
+                <p class="stack">React.js, Redux, Node.js, Express.js and MongoDB.</p>
                 <p class="project-description">Book exchanger is the app that lets you exchange those books laying in
                     the shelf for others you might like from people all around the country! Search books, publish
                     yours, chat with other users and arrange the exchange.
                 </p>
                 <div class="project-btns">
-                    <a target="_blank" href="https://book-exchanger.herokuapp.com"><button>Site <i
-                                class="far fa-eye"></i></button></a>
-                    <a target="_blank" href="https://github.com/sebassarmiento/Book-exchanger" href=""><button>Code <i
-                                class="fas fa-code"></i></button></a>
+                    <a target="_blank" href="https://book-exchanger.herokuapp.com">
+                        <button class="btn-1" >
+                            <span>Visit</span>
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </a>
+                    <a target="_blank" href="https://github.com/sebassarmiento/Book-exchanger" href="">
+                        <button class="btn-2" >
+                            <span>Code</span>
+                            <i class="fas fa-code"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="project">
+            <div class="project-bg"></div>
             <div class="project-images">
                 <img class="desktop-img-1" src="./img/mowser.gif" alt="">
             </div>
             <div class="project-info" id="mowser-info">
+
                 <h4 class="project-title">Mowser</h4>
-                <p class="stack-2">Vue.js and vuex.</p>
+                <p class="stack">Vue.js and vuex.</p>
                 <p class="project-description">
                     Mowser lets you browse over 1.000.000 Movies, Tv Shows and actors. Search by keywords, filter by
                     category, date, ratings, save your favourite movies, rate them and much more!
                 </p>
                 <div class="project-btns">
-                    <a target="_blank" href="https://book-exchanger.herokuapp.com"><button>Site <i
-                                class="far fa-eye"></i></button></a>
-                    <a target="_blank" href="https://github.com/sebassarmiento/Book-exchanger" href=""><button>Code <i
-                                class="fas fa-code"></i></button></a>
+                    <a target="_blank" href="https://book-exchanger.herokuapp.com">
+                        <button class="btn-1" >
+                            <span>Visit</span>
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </a>
+                    <a target="_blank" href="https://github.com/sebassarmiento/Book-exchanger"
+                        href="">
+                        <button class="btn-2" >
+                            <span>Code</span>
+                            <i class="fas fa-code"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="project">
+            <div class="project-bg"></div>
             <div class="project-images">
                 <img class="desktop-img-1" src="./img/bookexchangerdesktop.gif" alt="">
             </div>
@@ -126,10 +150,18 @@
                     other tweets and more.
                 </p>
                 <div class="project-btns">
-                    <a target="_blank" href="https://book-exchanger.herokuapp.com"><button>Site <i
-                                class="far fa-eye"></i></button></a>
-                    <a target="_blank" href="https://github.com/sebassarmiento/Book-exchanger" href=""><button>Code <i
-                                class="fas fa-code"></i></button></a>
+                    <a target="_blank" href="https://book-exchanger.herokuapp.com">
+                        <button class="btn-1" >
+                            <span>Visit</span>
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </a>
+                    <a target="_blank" href="https://github.com/sebassarmiento/Book-exchanger" href="">
+                        <button class="btn-2" >
+                            <span>Code</span>
+                            <i class="fas fa-code"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
