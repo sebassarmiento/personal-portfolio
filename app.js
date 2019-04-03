@@ -9,7 +9,7 @@ document.getElementById('scroll-to-projects').onclick = e => {
     console.log(document.getElementById('portfolio').getBoundingClientRect(), 'ACAAA')
     let scrollAmount = document.getElementById('portfolio').getBoundingClientRect().top
     window.scrollTo({
-        top: scrollAmount,
+        top: document.getElementById('portfolio').offsetTop - 50,
         behavior: 'smooth'
     })
 }

@@ -7,8 +7,8 @@
 }
 
 .portfolio .portfolio-title{
-    width: 30%;
-    margin: auto;
+    width: 100%;
+    margin: 0px;
     padding: 24px;
     text-align: center;
     font-family: Helvetica, sans-serif;
@@ -19,7 +19,6 @@
     align-items: center;
     justify-content: center;
     color: #304352;
-    margin: 0px 24px;
     text-align: center;
     padding: 48px 24px;
     font-weight: 300;

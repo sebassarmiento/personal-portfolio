@@ -8,7 +8,8 @@
 }
 
 .skills-container h2{
-    margin: 0px 24px;
+    max-width: 1200px;
+    margin: 0px auto;
     text-align: center;
     color: rgba(255, 255, 255, 0.966);
     padding: 48px 24px;
@@ -45,6 +46,7 @@
     padding: 24px;
     width: 80vw;
     margin: auto;
+    max-width: 1200px;
 }
 
 .skill{

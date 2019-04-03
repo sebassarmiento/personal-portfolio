@@ -4,12 +4,14 @@
     grid-column-gap: 50px;
     align-items: center;
     padding: 24px;
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
+    max-height: 1000px;
     width: 100vw;
+    max-width: 1200px;
     position: relative;
     color: #2c3e50;
     z-index: 1;
+    margin: 0px auto;
 }
 
 /* Images */
@@ -19,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 24px;
 }
 .project .project-images .desktop-img-1{
     width: 100%;
