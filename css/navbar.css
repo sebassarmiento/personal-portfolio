@@ -45,8 +45,10 @@
     position: relative;
     animation: showNavbarBrand 1s ease-in-out forwards;
     opacity: 0;
-    font-weight: 600;
+}
+.navbar .brand span{
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 .navbar .brand img{
     height: 60px;
@@ -187,8 +189,8 @@
         height: auto;
         position: fixed;
     }
-    .navbar::after{
-        transform: scale(1);
+    .navbar .brand span{
+        display: none;
     }
     .navbar .menu{
         position: absolute;

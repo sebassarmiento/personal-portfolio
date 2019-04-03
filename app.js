@@ -6,8 +6,10 @@ document.getElementById('see-work').onclick = e => {
 }
 
 document.getElementById('scroll-to-projects').onclick = e => {
+    console.log(document.getElementById('portfolio').getBoundingClientRect(), 'ACAAA')
+    let scrollAmount = document.getElementById('portfolio').getBoundingClientRect().top
     window.scrollTo({
-        top: 850,
+        top: scrollAmount,
         behavior: 'smooth'
     })
 }

@@ -18,7 +18,7 @@
 .intro .text{
     font-size: 2.5em;
     opacity: 0;
-    width: 50%;
+    width: 100%;
     animation: showIntroText 1s ease-in-out 1.5s forwards;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -30,8 +30,9 @@
 }
 
 .intro .intro-icon{
-    width: 50%;
+    width: 60%;
     padding: 24px;
+    padding-left: auto;
 }
 .intro .intro-icon img{
     width: 100%;
