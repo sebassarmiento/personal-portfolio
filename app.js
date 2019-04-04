@@ -39,15 +39,15 @@ window.onscroll = () => {
         document.getElementById('navbar').classList.remove('scrolled')
     }
 
-    if(scrollTop > windowHeight){
+    if (scrollTop > windowHeight) {
         document.getElementById('be-info').classList.add('show-info')
     }
 
-    if(scrollTop > windowHeight + 700){
+    if (scrollTop > windowHeight + 700) {
         document.getElementById('mowser-info').classList.add('show-info')
     }
 
-    if(scrollTop > windowHeight + 1300){
+    if (scrollTop > windowHeight + 1300) {
         document.getElementById('twitter-info').classList.add('show-info')
     }
 
@@ -61,7 +61,7 @@ let portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
 let mobileMenu = document.getElementById('mb-menu')
 
 mobileMenu.onclick = () => {
-    if(mobileMenu.classList.contains('mb-open')){
+    if (mobileMenu.classList.contains('mb-open')) {
         mobileMenu.classList.remove('mb-open')
         mobileMenu.classList.add('mb-closed')
         document.getElementById('navbar').classList.remove('mb-open')
@@ -81,10 +81,10 @@ contactForm.onsubmit = e => {
         email = document.getElementById('email').value,
         message = document.getElementById('message').value
 
-        console.log(name, email, message)
-    if(name.length > 1 && email.length > 1 && message.length > 1){
+    console.log(name, email, message)
+    if (name.length > 1 && email.length > 1 && message.length > 1) {
         console.log('Valid form')
-        fetch('https://localhost:3000/email', {
+        fetch('http://localhost:3000/email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -96,11 +96,26 @@ contactForm.onsubmit = e => {
                 message
             })
         })
-        .then(d => d.json())
-        .then(res => {
-            console.log(res)
-        })
+            .then(d => d.json())
+            .then(res => {
+                console.log(res)
+                if (res.success) {
+                    document.getElementById('name').value = ''
+                    document.getElementById('email').value = ''
+                    document.getElementById('message').value = ''
+                    document.getElementById('success-contact').classList.add('show-success')
+                    document.getElementById('success-text').classList.add('show-success-text')
+                    document.getElementById('success-contact').classList.remove('hide-success')
+                    document.getElementById('success-text').classList.remove('hide-success-text')
+                }
+            })
     } else {
         console.log('Invalid form')
     }
+}
+
+
+document.getElementById('success-close').onclick = e => {
+    document.getElementById('success-text').classList.add('hide-success-text')
+    document.getElementById('success-contact').classList.add('hide-success')
 }
