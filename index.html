@@ -15,6 +15,7 @@
     <link type="text/css" rel="stylesheet" href="css/contact.css">
     <link type="text/css" rel="stylesheet" href="css/footer.css">
     <link type="text/css" rel="stylesheet" href="css/circles.css">
+    <link rel="icon" href="./img/ss.png">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -185,20 +186,20 @@
 
     <div class="contact-container" id="contact">
         <h2>Contact</h2>
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form" >
             <div class="name">
                 <label for="">Name</label>
-                <input type="text" required>
+                <input type="text" required id="name" >
             </div>
             <div class="email">
                 <label for="">Email</label>
-                <input type="email" required>
+                <input type="email" required id="email" >
             </div>
             <div class="message">
                 <label for="">Message</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="message" cols="30" rows="10" ></textarea>
             </div>
-            <button class="send-btn">Send <i class="fas fa-paper-plane"></i></button>
+            <button class="send-btn" type="submit" >Send <i class="fas fa-paper-plane"></i></button>
         </form>
         <footer>
             Developed with plain HTML5, CSS3 and Vanilla Javascript.

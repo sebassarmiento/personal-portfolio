@@ -29,7 +29,6 @@ window.onscroll = () => {
     let maxScroll = document.body.scrollHeight
 
     scrollTop = document.documentElement.scrollTop
-    console.log(scrollTop)
 
 
     if (scrollTop > windowHeight - 200) {
@@ -81,6 +80,8 @@ contactForm.onsubmit = e => {
     let name = document.getElementById('name').value,
         email = document.getElementById('email').value,
         message = document.getElementById('message').value
+
+        console.log(name, email, message)
     if(name.length > 1 && email.length > 1 && message.length > 1){
         console.log('Valid form')
         fetch('https://localhost:3000/email', {
