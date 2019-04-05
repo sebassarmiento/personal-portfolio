@@ -7,7 +7,6 @@ document.getElementById('see-work').onclick = e => {
 
 document.getElementById('scroll-to-projects').onclick = e => {
     console.log(document.getElementById('portfolio').getBoundingClientRect(), 'ACAAA')
-    var scrollAmount = document.getElementById('portfolio').getBoundingClientRect().top
     window.scrollTo({
         top: document.getElementById('portfolio').offsetTop - 50,
         behavior: 'smooth'
@@ -15,10 +14,10 @@ document.getElementById('scroll-to-projects').onclick = e => {
 }
 
 
-window.onscroll = () => {
-    var windowHeight = window.innerHeight
+window.addEventListener('scroll', () => {
+    let windowHeight = window.innerHeight
 
-    var scrollTop = document.documentElement.scrollTop
+    let scrollTop = window.pageYOffset
 
     if (scrollTop < windowHeight) {
         scrollTop /= 10;
@@ -26,9 +25,7 @@ window.onscroll = () => {
         document.getElementById('intro').style.filter = `blur(${scrollTop / 5}px)`
     }
 
-    var maxScroll = document.body.scrollHeight
-
-    scrollTop = document.documentElement.scrollTop
+    let maxScroll = document.body.scrollHeight
 
 
     if (scrollTop > windowHeight - 200) {
@@ -53,12 +50,12 @@ window.onscroll = () => {
 
 
 
-}
+})
 
-var portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
+let portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
 
 
-var mobileMenu = document.getElementById('mb-menu')
+let mobileMenu = document.getElementById('mb-menu')
 
 mobileMenu.onclick = () => {
     if (mobileMenu.classList.contains('mb-open')) {
@@ -72,12 +69,12 @@ mobileMenu.onclick = () => {
     }
 }
 
-var contactForm = document.getElementById('contact-form')
+let contactForm = document.getElementById('contact-form')
 
 
 contactForm.onsubmit = e => {
     e.preventDefault()
-    var name = document.getElementById('name').value,
+    let name = document.getElementById('name').value,
         email = document.getElementById('email').value,
         message = document.getElementById('message').value
 
@@ -108,10 +105,8 @@ contactForm.onsubmit = e => {
                         document.getElementById('name').value = ''
                         document.getElementById('email').value = ''
                         document.getElementById('message').value = ''
-                        document.getElementById('success-contact').classList.add('show-success')
+                        document.getElementById('success-bg').classList.add('success-bg')
                         document.getElementById('success-text').classList.add('show-success-text')
-                        document.getElementById('success-contact').classList.remove('hide-success')
-                        document.getElementById('success-text').classList.remove('hide-success-text')
                     }, 2000)
                 }
             })
@@ -122,6 +117,6 @@ contactForm.onsubmit = e => {
 
 
 document.getElementById('success-close').onclick = e => {
-    document.getElementById('success-text').classList.add('hide-success-text')
-    document.getElementById('success-contact').classList.add('hide-success')
+    document.getElementById('success-bg').classList.remove('success-bg')
+    document.getElementById('success-text').classList.remove('show-success-text')
 }

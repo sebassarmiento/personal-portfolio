@@ -93,31 +93,33 @@
 
 
 
-#success-contact{
+.success-bg{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.226);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    transition: all 0.4s ease-in-out 0.4s;
+    background: rgba(0, 0, 0, 0.363);
+    z-index: 9;
 }
+
 
 #success-text{
     width: 80%;
     max-width: 500px;
-    background: rgb(241, 241, 241);
+    background: rgb(255, 255, 255);
     padding: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 200;
     font-size: 1.5em;
     text-align: center;
-    position: relative;
-    transition: all 0.4s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+    color: #293347;
+    z-index: 10;
 }
 
 #success-text i{
@@ -145,18 +147,11 @@
     cursor: pointer;
 }
 
-.show-success{
-    opacity: 1;
-    z-index: 10;
-}
-.show-success-text{
-    transform: scale(1);
+#success-text.show-success-text{
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translate(-50%, -50%) scale(1) !important;
 }
 
-.hide-success{
-    z-index: -10 !important;
-    opacity: 0;
-}
 .hide-success-text{
     transform: scale(0);
 }
@@ -164,14 +159,14 @@
 
 .loading{
     position: absolute;
-    height: 30px;
-    width: 30px;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
+    height: 28px;
+    width: 28px;
+    top: calc(50% - 14px);
+    left: calc(50% - 14px);
     border-radius: 50%;
     border: 2px solid transparent;
-    border-top: 2px solid #dee6f7;
-    border-right: 2px solid #e1e9fa;
+    border-top: 2px solid #f3f3f3;
+    border-right: 2px solid #f3f3f3;
     animation: loader 0.7s linear infinite;
 }
 

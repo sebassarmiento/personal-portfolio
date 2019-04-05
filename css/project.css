@@ -170,6 +170,7 @@
         height: 50vh;
         width: 100%;
         position: relative;
+        padding: 0px;
     }
 
     .project .project-images .desktop-img-1{
@@ -184,9 +185,12 @@
         border-radius: 14px;
     }
 
-    .project-info{
+    .project .project-info{
         padding-top: 0px !important;
         margin-top: -24px;
+        z-index: 2;
+        opacity: 1;
+        transform: translateX(0%);
     }
 
     .project-info .project-btns{
