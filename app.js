@@ -72,6 +72,24 @@ mobileMenu.onclick = () => {
 let contactForm = document.getElementById('contact-form')
 
 
+let showError = () => {
+    document.getElementById('send-btn').innerHTML = 'Send <i class="fas fa-paper-plane"></i>'
+    document.getElementById('name').value = ''
+    document.getElementById('email').value = ''
+    document.getElementById('message').value = ''
+    document.getElementById('contact-result-bg').classList.add('contact-result-bg')
+    document.getElementById('error-text').classList.add('show-error-text')
+}
+
+let showSuccess = () => {
+    document.getElementById('send-btn').innerHTML = 'Send <i class="fas fa-paper-plane"></i>'
+    document.getElementById('name').value = ''
+    document.getElementById('email').value = ''
+    document.getElementById('message').value = ''
+    document.getElementById('contact-result-bg').classList.add('contact-result-bg')
+    document.getElementById('success-text').classList.add('show-success-text')
+}
+
 contactForm.onsubmit = e => {
     e.preventDefault()
     let name = document.getElementById('name').value,
@@ -84,7 +102,7 @@ contactForm.onsubmit = e => {
 
         document.getElementById('send-btn').innerHTML = '<span class="loading" ></span>'
 
-        fetch('http://localhost:3000/email', {
+        fetch('https://sarmientosebastianapi.herokuapp.com/email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -101,14 +119,14 @@ contactForm.onsubmit = e => {
                 console.log(res)
                 if (res.success) {
                     setTimeout(() => {
-                        document.getElementById('send-btn').innerHTML = 'Send <i class="fas fa-paper-plane"></i>'
-                        document.getElementById('name').value = ''
-                        document.getElementById('email').value = ''
-                        document.getElementById('message').value = ''
-                        document.getElementById('success-bg').classList.add('success-bg')
-                        document.getElementById('success-text').classList.add('show-success-text')
+                        showSuccess()
                     }, 2000)
+                } else {
+                    showError()
                 }
+            })
+            .catch(err => {
+                showError()
             })
     } else {
         console.log('Invalid form')
@@ -117,6 +135,11 @@ contactForm.onsubmit = e => {
 
 
 document.getElementById('success-close').onclick = e => {
-    document.getElementById('success-bg').classList.remove('success-bg')
+    document.getElementById('contact-result-bg').classList.remove('contact-result-bg')
     document.getElementById('success-text').classList.remove('show-success-text')
+}
+
+document.getElementById('error-close').onclick = e => {
+    document.getElementById('contact-result-bg').classList.remove('contact-result-bg')
+    document.getElementById('error-text').classList.remove('show-error-text')
 }
