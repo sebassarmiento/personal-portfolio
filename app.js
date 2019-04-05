@@ -7,7 +7,7 @@ document.getElementById('see-work').onclick = e => {
 
 document.getElementById('scroll-to-projects').onclick = e => {
     console.log(document.getElementById('portfolio').getBoundingClientRect(), 'ACAAA')
-    let scrollAmount = document.getElementById('portfolio').getBoundingClientRect().top
+    var scrollAmount = document.getElementById('portfolio').getBoundingClientRect().top
     window.scrollTo({
         top: document.getElementById('portfolio').offsetTop - 50,
         behavior: 'smooth'
@@ -16,9 +16,9 @@ document.getElementById('scroll-to-projects').onclick = e => {
 
 
 window.onscroll = () => {
-    let windowHeight = window.innerHeight
+    var windowHeight = window.innerHeight
 
-    let scrollTop = document.documentElement.scrollTop
+    var scrollTop = document.documentElement.scrollTop
 
     if (scrollTop < windowHeight) {
         scrollTop /= 10;
@@ -26,7 +26,7 @@ window.onscroll = () => {
         document.getElementById('intro').style.filter = `blur(${scrollTop / 5}px)`
     }
 
-    let maxScroll = document.body.scrollHeight
+    var maxScroll = document.body.scrollHeight
 
     scrollTop = document.documentElement.scrollTop
 
@@ -55,10 +55,10 @@ window.onscroll = () => {
 
 }
 
-let portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
+var portfolioOffsetTop = document.querySelector('.portfolio').offsetTop
 
 
-let mobileMenu = document.getElementById('mb-menu')
+var mobileMenu = document.getElementById('mb-menu')
 
 mobileMenu.onclick = () => {
     if (mobileMenu.classList.contains('mb-open')) {
@@ -72,18 +72,21 @@ mobileMenu.onclick = () => {
     }
 }
 
-let contactForm = document.getElementById('contact-form')
+var contactForm = document.getElementById('contact-form')
 
 
 contactForm.onsubmit = e => {
     e.preventDefault()
-    let name = document.getElementById('name').value,
+    var name = document.getElementById('name').value,
         email = document.getElementById('email').value,
         message = document.getElementById('message').value
 
     console.log(name, email, message)
     if (name.length > 1 && email.length > 1 && message.length > 1) {
         console.log('Valid form')
+
+        document.getElementById('send-btn').innerHTML = '<span class="loading" ></span>'
+
         fetch('http://localhost:3000/email', {
             method: 'POST',
             headers: {
@@ -100,13 +103,16 @@ contactForm.onsubmit = e => {
             .then(res => {
                 console.log(res)
                 if (res.success) {
-                    document.getElementById('name').value = ''
-                    document.getElementById('email').value = ''
-                    document.getElementById('message').value = ''
-                    document.getElementById('success-contact').classList.add('show-success')
-                    document.getElementById('success-text').classList.add('show-success-text')
-                    document.getElementById('success-contact').classList.remove('hide-success')
-                    document.getElementById('success-text').classList.remove('hide-success-text')
+                    setTimeout(() => {
+                        document.getElementById('send-btn').innerHTML = 'Send <i class="fas fa-paper-plane"></i>'
+                        document.getElementById('name').value = ''
+                        document.getElementById('email').value = ''
+                        document.getElementById('message').value = ''
+                        document.getElementById('success-contact').classList.add('show-success')
+                        document.getElementById('success-text').classList.add('show-success-text')
+                        document.getElementById('success-contact').classList.remove('hide-success')
+                        document.getElementById('success-text').classList.remove('hide-success-text')
+                    }, 2000)
                 }
             })
     } else {
