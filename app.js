@@ -1,16 +1,29 @@
+let myScrollTo = val => {
+
+    if(document.documentElement.scrollTop < val){
+        let interval = setInterval(() => {
+            document.documentElement.scrollTop += 10
+            if(document.documentElement.scrollTop > val){
+                clearInterval(interval)
+            }
+        }, 5)
+    } else {
+        let interval = setInterval(() => {
+            document.documentElement.scrollTop -= 10
+            if(document.documentElement.scrollTop < val){
+                clearInterval(interval)
+            }
+        }, 5)
+    }
+
+}
+
 document.getElementById('see-work').onclick = e => {
-    window.scrollTo({
-        top: 850,
-        behavior: 'smooth'
-    })
+    myScrollTo(780)
 }
 
 document.getElementById('scroll-to-projects').onclick = e => {
-    console.log(document.getElementById('portfolio').getBoundingClientRect(), 'ACAAA')
-    window.scrollTo({
-        top: document.getElementById('portfolio').offsetTop - 50,
-        behavior: 'smooth'
-    })
+    myScrollTo(780)
 }
 
 
@@ -19,19 +32,14 @@ window.addEventListener('scroll', () => {
 
     let scrollTop = window.pageYOffset
 
-    if (scrollTop < windowHeight) {
+    if (scrollTop < windowHeight - 200) {
         scrollTop /= 10;
         document.getElementById('intro').style.webkitFilter = `blur(${scrollTop / 5}px)`
         document.getElementById('intro').style.filter = `blur(${scrollTop / 5}px)`
     }
 
-    let maxScroll = document.body.scrollHeight
-
-
     if (scrollTop > windowHeight - 200) {
         document.getElementById('navbar').classList.add('scrolled')
-        document.querySelector('.phone-img-1').style.webkitTransform = `translateY(${scrollTop / 4}px)`
-        document.querySelector('.phone-img-1').style.transform = `translateY(${scrollTop / 4}px)`
     } else {
         document.getElementById('navbar').classList.remove('scrolled')
     }
@@ -118,9 +126,7 @@ contactForm.onsubmit = e => {
             .then(res => {
                 console.log(res)
                 if (res.success) {
-                    setTimeout(() => {
-                        showSuccess()
-                    }, 2000)
+                    showSuccess()
                 } else {
                     showError()
                 }
