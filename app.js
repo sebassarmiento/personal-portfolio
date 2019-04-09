@@ -1,3 +1,5 @@
+let windowHeight = window.innerHeight
+
 let myScrollTo = val => {
 
     if(document.documentElement.scrollTop < val){
@@ -19,11 +21,11 @@ let myScrollTo = val => {
 }
 
 document.getElementById('see-work').onclick = e => {
-    myScrollTo(780)
+    myScrollTo(windowHeight + 125)
 }
 
 document.getElementById('scroll-to-projects').onclick = e => {
-    myScrollTo(780)
+    myScrollTo(windowHeight + 125)
 }
 
 

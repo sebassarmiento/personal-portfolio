@@ -104,6 +104,12 @@
 }
 
 
+#see-work-mobile{
+    display: none;
+}
+#see-work{
+    display: block;
+}
 
 
 
@@ -180,6 +186,14 @@
     svg{
         margin-top: -100px;
     }
+
+    #see-work{
+        display: none;
+    }
+    #see-work-mobile{
+        display: block;
+    }
+
 }
 
 
