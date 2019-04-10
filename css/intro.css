@@ -100,7 +100,7 @@
 .intro .see-projects i{
     margin-left: 12px;
     color: white;
-    margin-bottom: -12px;
+    transform: translateY(6px);
 }
 
 
