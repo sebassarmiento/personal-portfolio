@@ -12,7 +12,56 @@
     font-weight: 300;
     font-family: 'Lato', sans-serif;
     position: relative;
+    display: flex;
+    align-items: center;
 }
+
+.contact-container h2 span{
+    color: rgba(41,51,71,0.65);
+    font-size: 0.7em;
+    text-transform: none;
+    margin-left: 12px;
+    margin-left: auto;
+}
+
+.contact-container .email-adress{
+    font-weight: lighter;
+    color: #304352;
+    max-width: 600px;
+    margin: 12px auto;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.contact-container .email-adress p{
+    font-size: 1.4em;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(41,51,71,0.65);
+    padding-bottom: 24px;
+}
+
+.contact-container .email-adress span{
+    position: relative;
+    display: block;
+    color: rgba(41,51,71,0.65);
+}
+.contact-container .email-adress span::before, .contact-container .email-adress span::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: calc(50% - 30px);
+    left: 12px;
+    top: calc(50% - 1px);
+    background: rgb(208, 214, 226);
+    display: none;
+}
+.contact-container .email-adress span::after{
+    left: calc(100% - 12px);
+    transform: translateX(-100%);
+    display: block;
+}
+
 
 .contact-form{
     width: 100%;
@@ -89,6 +138,10 @@
 
     .contact-form .name, .contact-form .email, .contact-form .message{
         margin-top: 24px;
+    }
+
+    .contact-container h2 span{
+        font-size: 0.6em;
     }
 }
 
