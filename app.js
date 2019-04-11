@@ -82,23 +82,25 @@ mobileMenu.onclick = () => {
 let contactForm = document.getElementById('contact-form')
 
 
-let showError = () => {
+let clearForm = () => {
     document.getElementById('send-btn').innerHTML = 'Send <i class="fas fa-paper-plane"></i>'
     document.getElementById('name').value = ''
     document.getElementById('email').value = ''
     document.getElementById('message').value = ''
     document.getElementById('contact-result-bg').classList.add('contact-result-bg')
+}
+
+let showError = () => {
+    clearForm()
     document.getElementById('error-text').classList.add('show-error-text')
 }
 
 let showSuccess = () => {
-    document.getElementById('send-btn').innerHTML = 'Send <i class="fas fa-paper-plane"></i>'
-    document.getElementById('name').value = ''
-    document.getElementById('email').value = ''
-    document.getElementById('message').value = ''
-    document.getElementById('contact-result-bg').classList.add('contact-result-bg')
+    clearForm()
     document.getElementById('success-text').classList.add('show-success-text')
 }
+
+let sending = false
 
 contactForm.onsubmit = e => {
     e.preventDefault()
@@ -106,10 +108,12 @@ contactForm.onsubmit = e => {
         email = document.getElementById('email').value,
         message = document.getElementById('message').value
 
-    console.log(name, email, message)
-    if (name.length > 1 && email.length > 1 && message.length > 1) {
+    if (name.length > 1 && email.length > 1 && message.length > 1 && !sending) {
         console.log('Valid form')
 
+        sending = true
+        
+        document.getElementById('send-btn').classList.add('disabled-btn')
         document.getElementById('send-btn').innerHTML = '<span class="loading" ></span>'
 
         fetch('https://sarmientosebastianapi.herokuapp.com/email', {
@@ -126,6 +130,8 @@ contactForm.onsubmit = e => {
         })
             .then(d => d.json())
             .then(res => {
+                document.getElementById('send-btn').classList.remove('disabled-btn')
+                sending = false
                 console.log(res)
                 if (res.success) {
                     showSuccess()
@@ -134,6 +140,8 @@ contactForm.onsubmit = e => {
                 }
             })
             .catch(err => {
+                document.getElementById('send-btn').classList.remove('disabled-btn')
+                sending = false
                 showError()
             })
     } else {
