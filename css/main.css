@@ -611,47 +611,42 @@ svg{
 
 .project-info .project-btns .btn-1{
     border: none;
-    padding: 18px 24px;
-    transition: all 0.2s ease-in-out;
+    padding: 12px 18px;
+    transition: all 0.15s ease-in-out;
     color: white;
     background-image: linear-gradient(-60deg, rgb(247, 107, 26) 0%, #f09819 100%);
     position: relative;
     overflow: hidden;
     margin-right: 12px;
-    font-size: 0.8em;
-    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
     font-weight: 300;
     cursor: pointer;
     box-shadow: none;
     transition: all 0.2s ease-in-out;
-    min-width: 120px;
-    border-radius: 2px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.8;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    opacity: 1;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .project-info .project-btns .btn-2{
-    transition: all 0.2s ease-in-out;
-    border-radius: 2px;
+    transition: all 0.15s ease-in-out;
+    border-radius: 6px;
     background: none;
     border: none;
-    padding: 18px 24px;
+    padding: 12px 18px;
     font-size: 0.8em;
     color: white;
     cursor: pointer;
-    font-family: 'Lato', sans-serif;
     font-weight: 300;
     background: #00a9b2;
     background: linear-gradient(to bottom right,#408488, #00a9b2);
     background: #19304B;
     background: linear-gradient(to bottom right, #19304B, #00a9b2);
     cursor: pointer;
-    min-width: 120px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.8;
+    
+    letter-spacing: 2px;
+    opacity: 1;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .project-info .project-btns .btn-2:hover i{
@@ -659,7 +654,7 @@ svg{
 }
 
 .project-info .project-btns button i{
-    margin-left: 6px;
+    margin-left: 2px;
     color: white;
     transition: all 0.2s ease-in-out;
 }
